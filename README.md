@@ -1,3 +1,10 @@
+## deploy to github page
+
+Just follow [this](https://facebook.github.io/create-react-app/docs/deployment#github-pages-https-pagesgithubcom) from react app official doc
+
+- things to remember is to add `https://github.com/emp3ror/thecatapp` on package.json. not `https://github.com/emp3ror/thecatapp/`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
