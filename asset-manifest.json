@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/thecatapp/static/css/main.614b9a97.chunk.css",
-    "main.js": "/thecatapp/static/js/main.b0dfb9fe.chunk.js",
-    "main.js.map": "/thecatapp/static/js/main.b0dfb9fe.chunk.js.map",
+    "main.css": "/thecatapp/static/css/main.fe4a6427.chunk.css",
+    "main.js": "/thecatapp/static/js/main.b3ceb755.chunk.js",
+    "main.js.map": "/thecatapp/static/js/main.b3ceb755.chunk.js.map",
     "runtime~main.js": "/thecatapp/static/js/runtime~main.c8e25706.js",
     "runtime~main.js.map": "/thecatapp/static/js/runtime~main.c8e25706.js.map",
     "static/js/2.4a792116.chunk.js": "/thecatapp/static/js/2.4a792116.chunk.js",
     "static/js/2.4a792116.chunk.js.map": "/thecatapp/static/js/2.4a792116.chunk.js.map",
     "index.html": "/thecatapp/index.html",
-    "precache-manifest.c4092b7185ccbb8d37ef4abb26d615be.js": "/thecatapp/precache-manifest.c4092b7185ccbb8d37ef4abb26d615be.js",
+    "precache-manifest.e08450547564f0d52e1aba7f99429065.js": "/thecatapp/precache-manifest.e08450547564f0d52e1aba7f99429065.js",
     "service-worker.js": "/thecatapp/service-worker.js",
-    "static/css/main.614b9a97.chunk.css.map": "/thecatapp/static/css/main.614b9a97.chunk.css.map"
+    "static/css/main.fe4a6427.chunk.css.map": "/thecatapp/static/css/main.fe4a6427.chunk.css.map"
   }
 }
