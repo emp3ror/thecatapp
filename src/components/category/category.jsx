@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 
 import { catActions } from "../../_state/_actions/";
-import "./category.css";
+import "./category.scss";
 
 class Categorylist extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class Categorylist extends Component {
           onClick={() => this.handleClick(item.id)}
           className="c-category__item"
         >
-          {item.name}
+          <a>{item.name}</a>
         </li>
       ));
     }

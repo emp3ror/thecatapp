@@ -1,0 +1,40 @@
+/* SCSS variables */
+$app-brand-one: #004f62;
+$app-brand-two: darken($app-brand-one, 5%);
+$app-brand-three: mix($app-brand-one, white, 10%);
+$app-brand-inverse: mix($app-brand-one, white, 5%);
+$app-brand-inverse-transparent: fade-out($app-brand-one, 0.9);
+$app-border-radius: 4px;
+$spacer: 1rem;
+
+.c-category {
+  text-decoration: none;
+  list-style: none;
+  padding: $spacer;
+  margin: 0;
+  white-space: nowrap;
+
+  li {
+    display: block;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #004f62;
+    width: 100%;
+    border-radius: $app-border-radius;
+    transition: background-color 250ms;
+    padding: $spacer/2 $spacer;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $app-brand-inverse-transparent;
+    }
+    &.--active {
+      color: $app-brand-inverse;
+      background-color: $app-brand-one;
+    }
+  }
+}
