@@ -1,0 +1,27 @@
+* {
+  position: relative;
+  vertical-align: top;
+}
+
+body {
+  background: #f4f4f4;
+  margin: 0;
+}
+
+.l-sidebar {
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  background: rgba(254, 254, 254, 1);
+  border-right: 1px solid #f4f4f4;
+  position: fixed;
+  z-index: 100;
+  padding: 100px 10px 10px 10px;
+}
+
+.l-main {
+  padding-left: 300px;
+  width: 80%;
+  display: inline-block;
+}

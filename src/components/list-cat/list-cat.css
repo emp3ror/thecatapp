@@ -1,0 +1,13 @@
+.c-list {
+  padding: 20px 40px;
+  column-width: 320px;
+  column-gap: 15px;
+}
+.l-4 {
+  position: relative;
+  margin: 0;
+  padding: 20px 10px;
+  display: inline-block;
+  /* width: 200px; */
+  vertical-align: top;
+}
