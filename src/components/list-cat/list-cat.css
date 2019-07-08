@@ -11,3 +11,11 @@
   /* width: 200px; */
   vertical-align: top;
 }
+
+.c-btn--load {
+  margin: auto;
+}
+
+.c-holder__text--center {
+  text-align: center;
+}

@@ -63,4 +63,28 @@ describe("getCategories actions", () => {
       expect(store.getActions()).toEqual(expectedActions);
     });
   });
+
+  it("load more", () => {
+    moxios.wait(() => {
+      const request = moxios.requests.mostRecent();
+      request.respondWith({
+        status: 200,
+        response: getCatList.response2
+      });
+    });
+
+    const expectedActions = [
+      { type: catConstants.LIST_REQUEST },
+      { type: catConstants.LIST_SUCCESS_MORE, data: getCatList.response2 }
+    ];
+
+    const store = mockStore({
+      cats: {}
+    });
+
+    return store.dispatch(catActions.getLists(2, true)).then(() => {
+      // return of async actions
+      expect(store.getActions()).toEqual(expectedActions);
+    });
+  });
 });

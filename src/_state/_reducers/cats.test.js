@@ -30,4 +30,36 @@ describe("cats list reducer", () => {
     };
     expect(cats({}, failAction)).toEqual(errMsg);
   });
+
+  it("should handle load more request", () => {
+    const initState = {
+      loading: false,
+      data: getCatList.response1
+    };
+    const updateAction = {
+      type: catConstants.LIST_REQUEST,
+      data: getCatList.response2
+    };
+    const newState = {
+      loading: true,
+      data: getCatList.response1
+    };
+    expect(cats(initState, updateAction)).toEqual(newState);
+  });
+
+  it("should handle load more success", () => {
+    const initState = {
+      loading: false,
+      data: getCatList.response1
+    };
+    const updateAction = {
+      type: catConstants.LIST_SUCCESS_MORE,
+      data: getCatList.response2
+    };
+    const newState = {
+      loading: false,
+      data: getCatList.response1.concat(getCatList.response2)
+    };
+    expect(cats(initState, updateAction)).toEqual(newState);
+  });
 });

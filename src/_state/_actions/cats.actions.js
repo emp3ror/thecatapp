@@ -33,7 +33,7 @@ function getCategories() {
   }
 }
 
-function getLists() {
+function getLists(page = 1, more = false) {
   return dispatch => {
     dispatch(request());
 
@@ -52,7 +52,10 @@ function getLists() {
   }
 
   function success(data) {
-    return { type: catConstants.LIST_SUCCESS, data };
+    let successmsg = more
+      ? catConstants.LIST_SUCCESS_MORE
+      : catConstants.LIST_SUCCESS;
+    return { type: successmsg, data };
   }
 
   function failure(err) {

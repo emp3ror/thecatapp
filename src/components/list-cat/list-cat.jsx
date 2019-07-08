@@ -10,17 +10,23 @@ class listcat extends Component {
     super(props);
 
     this.state = {
-      loading: false
+      page: 1
     };
+
+    this.handleLoadMoreClick = this.handleLoadMoreClick.bind(this);
   }
   componentDidMount() {
-    console.log("called");
     const { dispatch } = this.props;
     dispatch(catActions.getLists());
   }
 
-  handleClick(id) {
-    console.log(id);
+  handleLoadMoreClick() {
+    this.setState({
+      page: this.state.page + 1
+    });
+    console.log("handle click");
+    const { dispatch } = this.props;
+    dispatch(catActions.getLists(this.state.page, true));
   }
 
   render() {
@@ -39,7 +45,16 @@ class listcat extends Component {
         </div>
       ));
     }
-    return <div className="c-list">{comp}</div>;
+    return (
+      <Fragment>
+        <div className="c-list">{comp}</div>
+        <div className="c-holder__text--center">
+          <div className="btn c-btn--load" onClick={this.handleLoadMoreClick}>
+            Load More
+          </div>
+        </div>
+      </Fragment>
+    );
   }
 }
 
