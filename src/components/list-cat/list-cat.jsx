@@ -33,12 +33,9 @@ class listcat extends Component {
     const { list } = this.props;
     console.log(list);
 
-    let comp;
-    if (list.loading) {
-      comp = <div>loading...</div>;
-    } else if (list.data) {
-      comp = "not loading";
-
+    let comp = "";
+    
+    if (list.data) {
       comp = list.data.map((item, key) => (
         <div key={item.id} className="l-4">
           <SingleCat data={item} />
@@ -48,6 +45,9 @@ class listcat extends Component {
     return (
       <Fragment>
         <div className="c-list">{comp}</div>
+        <div>{list.loading &&
+          <div>Loading...</div>
+        }</div>
         <div className="c-holder__text--center">
           <div className="btn c-btn--load" onClick={this.handleLoadMoreClick}>
             Load More
