@@ -11,8 +11,10 @@ class SingleCat extends Component {
     let item = this.props.data;
     return (
       <div className="c-singleCat">
-        <img src={item.url} alt="" className="c-singleCat__img" />
-        <span className="c-singleCat__id">{item.id}</span>
+        <div className="c-singleCat--holder">
+          <img src={item.url} alt="" className="c-singleCat__img" />
+          <span className="c-singleCat__id">{item.id}</span>
+        </div>
       </div>
     );
   }
